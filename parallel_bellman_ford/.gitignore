@@ -1,0 +1,17 @@
+.DS_Store
+.exe
+__pycache__/
+/build/
+/dist/
+*.egg-info/
+*.o
+*.so
+*.dylib
+*.log
+*.out
+*.tmp
+*.swp
+/data/inputs/
+/data/outputs/
+
+    
