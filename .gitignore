@@ -1,0 +1,51 @@
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.swp
+*.tmp
+*.log
+*.pyc
+*.pyo
+
+# Python packaging / virtualenv artifacts
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Build artifacts and compiled objects
+build/
+*/build/
+dist/
+*/dist/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+*.bin
+
+# Generated binaries and launchers in the project tree
+graph_gen
+*/graph_gen
+v4_mpi
+v5_mpi_simd
+v6_omp_mpi
+v7_omp_simd_mpi
+bf_omp_frontier
+*/valid_graph.bin
+
+# Generated benchmark outputs outside the tracked Analysis tree
+All_results/
+Analysis.zip
+*/output/
+*/outputs/
+*/data/
+*/data/*
+
+# Project-specific generated reports and binaries
+parallel_bellman_ford/report.pdf
+parallel_bellman_ford/*.bin

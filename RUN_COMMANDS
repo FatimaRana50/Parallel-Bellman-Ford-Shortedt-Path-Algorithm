@@ -1,0 +1,73 @@
+Run them like this. If a directory does not already have those six files in data/inputs, copy them there once first.
+
+cd /home/fatima/PDC_HYBRID/parallel_bellman_ford
+rm -f data/comparison_results.csv
+rm -rf data/comparison_outputs
+for t in 1 2 4 8 12; do
+  make run_selected_graphs_omp OMP_THREADS=$t
+done
+
+---
+cd ~/PDC_HYBRID/parallel_bellman_ford
+
+# Run baseline only_MPI with 4 processes
+make docker_run_baseline_mpi NP=4
+
+# Run baseline goal_1 (OMP+MPI) with 4 processes, 4 threads each
+make docker_run_baseline_hybrid NP=4 OMP_THREADS=4
+
+# Run BOTH in one command
+make docker_run_all_baselines NP=4 OMP_THREADS=4
+
+----
+
+cd /home/fatima/PDC_HYBRID/V1_OMP
+rm -f data/results.csv
+rm -rf data/outputs
+for t in 1 2 4 8 12; do
+  make run_selected_graphs THREADS=$t
+done
+
+cd /home/fatima/PDC_HYBRID/V2_SIMD
+rm -f data/results.csv
+rm -rf data/outputs
+make run_selected_graphs
+
+
+cd /home/fatima/PDC_HYBRID/V3_OMP+SIMD
+rm -f data/results.csv
+rm -rf data/outputs
+for t in 1 2 4 8 12; do
+  make run_selected_graphs THREADS=$t
+done
+
+
+cd /home/fatima/PDC_HYBRID/V4_MPI
+rm -f results.csv
+rm -rf outputs
+make run_selected_graphs NP=4
+
+cd V5_SIMD+MPI && make docker_build && make docker_run_selected_graphs NP=4
+
+
+cd V6_MP+MPI
+make docker_build
+make docker_run_selected_graphs NP=4
+
+
+
+cd V7_MP+MPI+SIMD
+make docker_build
+make docker_run_selected_graphs NP=4
+docker exec node0 cat /project/V7_MP+MPI+SIMD/results.txt | head -10
+
+
+
+
+
+
+
+
+
+
+
