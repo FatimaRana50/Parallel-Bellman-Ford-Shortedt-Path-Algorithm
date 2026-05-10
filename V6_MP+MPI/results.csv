@@ -1,0 +1,15 @@
+0,4,4,v6_omp_mpi,1000,0.50,0,0,0.000000,15.177762,15.152802,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778326914190938.bin,true
+0,4,4,v6_omp_mpi,5000,0.25,0,0,0.000000,212.058181,211.773818,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778327130711887.bin,true
+0,4,4,v6_omp_mpi,5000,0.50,0,0,0.000000,419.217778,417.550458,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778327551839905.bin,true
+0,4,4,v6_omp_mpi,100,0.25,0,0,0.000000,0.180290,0.165853,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778331210469599.bin,true
+0,4,4,v6_omp_mpi,100,1.00,0,0,0.000000,0.189394,0.176574,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778331211494633.bin,true
+0,4,4,v6_omp_mpi,1000,0.25,0,0,0.000000,0.205115,0.183106,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778331212421718.bin,true
+0,4,4,v6_omp_mpi,1000,0.50,0,0,0.000000,0.303282,0.267806,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778331213520600.bin,true
+0,4,4,v6_omp_mpi,5000,0.25,0,0,0.000000,0.480780,0.214288,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778331214723671.bin,true
+0,4,4,v6_omp_mpi,5000,0.50,0,0,0.000000,0.797562,0.375135,/project/parallel_bellman_ford/data/outputs/v6_omp_mpi_1778331216282732.bin,true
+0,4,4,v6_omp_mpi,100,0.25,0,0,0.000000,0.358168,0.343409,/project/V6_MP+MPI/outputs/v6_omp_mpi_1778334465896758.bin,true
+0,4,4,v6_omp_mpi,100,1.00,0,0,0.000000,0.454998,0.428999,/project/V6_MP+MPI/outputs/v6_omp_mpi_1778334467895632.bin,true
+0,4,4,v6_omp_mpi,1000,0.25,0,0,0.000000,0.518125,0.450737,/project/V6_MP+MPI/outputs/v6_omp_mpi_1778334470075663.bin,true
+0,4,4,v6_omp_mpi,1000,0.50,0,0,0.000000,0.470906,0.368943,/project/V6_MP+MPI/outputs/v6_omp_mpi_1778334471924627.bin,true
+0,4,4,v6_omp_mpi,5000,0.25,0,0,0.000000,1.664993,0.675418,/project/V6_MP+MPI/outputs/v6_omp_mpi_1778334474999576.bin,true
+0,4,4,v6_omp_mpi,5000,0.50,0,0,0.000000,2.512007,0.849997,/project/V6_MP+MPI/outputs/v6_omp_mpi_1778334479091341.bin,true
