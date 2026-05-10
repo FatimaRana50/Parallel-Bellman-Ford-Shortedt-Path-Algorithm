@@ -1,0 +1,8 @@
+threads_num,cuda_threads_num,processes_num,program,vertices_num,density,cuda_grid_size,cuda_block_size,percent_on_device,program_seconds,bf_seconds,output_filename,has_negative_cycles
+0,0,4,v4_mpi_nonblocking,100,0.25,0,0,0.000000,0.274556,0.257101,/project/V4_MPI/outputs/v4_mpi_nonblocking_1778333867393766.bin,true
+0,0,4,v4_mpi_nonblocking,100,1.00,0,0,0.000000,0.285153,0.241152,/project/V4_MPI/outputs/v4_mpi_nonblocking_1778333870312167.bin,true
+0,0,4,v4_mpi_nonblocking,1000,0.25,0,0,0.000000,7.365459,7.247930,/project/V4_MPI/outputs/v4_mpi_nonblocking_1778333880043185.bin,true
+0,0,4,v4_mpi_nonblocking,1000,0.50,0,0,0.000000,10.591192,10.434948,/project/V4_MPI/outputs/v4_mpi_nonblocking_1778333896915750.bin,true
+0,0,4,v4_mpi_nonblocking,5000,0.50,0,0,0.000000,154.217209,153.125847,/project/parallel_bellman_ford/data/outputs/v4_mpi_nonblocking_1778333901480417.bin,true
+0,0,4,v4_mpi_nonblocking,5000,0.25,0,0,0.000000,58.043153,57.005609,/project/V4_MPI/outputs/v4_mpi_nonblocking_1778333956999290.bin,true
+0,0,4,v4_mpi_nonblocking,5000,0.50,0,0,0.000000,105.326708,104.437986,/project/V4_MPI/outputs/v4_mpi_nonblocking_1778334065337936.bin,true
