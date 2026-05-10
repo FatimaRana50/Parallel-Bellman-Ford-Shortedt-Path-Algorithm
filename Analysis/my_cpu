@@ -1,0 +1,220 @@
+# Check your CPU layout
+likwid-topology
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Core(TM) i7-10610U CPU @ 1.80GHz
+CPU type:	Intel Kabylake processor
+CPU stepping:	12
+********************************************************************************
+Hardware Thread Topology
+********************************************************************************
+Sockets:		1
+Cores per socket:	4
+Threads per core:	2
+--------------------------------------------------------------------------------
+HWThread	Thread		Core		Socket		Available
+0		0		0		0		*
+1		0		1		0		*
+2		0		2		0		*
+3		0		3		0		*
+4		1		0		0		*
+5		1		1		0		*
+6		1		2		0		*
+7		1		3		0		*
+--------------------------------------------------------------------------------
+Socket 0:		( 0 4 1 5 2 6 3 7 )
+--------------------------------------------------------------------------------
+********************************************************************************
+Cache Topology
+********************************************************************************
+Level:			1
+Size:			32 kB
+Cache groups:		( 0 4 ) ( 1 5 ) ( 2 6 ) ( 3 7 )
+--------------------------------------------------------------------------------
+Level:			2
+Size:			256 kB
+Cache groups:		( 0 4 ) ( 1 5 ) ( 2 6 ) ( 3 7 )
+--------------------------------------------------------------------------------
+Level:			3
+Size:			8 MB
+Cache groups:		( 0 4 1 5 2 6 3 7 )
+--------------------------------------------------------------------------------
+********************************************************************************
+NUMA Topology
+********************************************************************************
+NUMA domains:		1
+--------------------------------------------------------------------------------
+Domain:			0
+Processors:		( 0 4 1 5 2 6 3 7 )
+Distances:		10
+Free memory:		1135.18 MB
+Total memory:		15620.2 MB
+--------------------------------------------------------------------------------
+fatima@fatima-ThinkPad-T14s-Gen-1:~$ # Measure scalar (no SIMD) peak
+likwid-bench -t peakflops -W N:160kB:4
+
+# Measure AVX (256-bit) peak
+likwid-bench -t peakflops_avx -W N:160kB:4
+
+# Measure AVX2 with FMA (fused multiply-add) - This is your CPU's maximum
+likwid-bench -t peakflops_avx_fma -W N:160kB:4
+
+# Measure with all 8 logical cores
+likwid-bench -t peakflops_avx_fma -W N:320kB:8
+Allocate: Process running on hwthread 0 (Domain N) - Vector length 20000/160000 Offset 0 Alignment 512
+Initialization: Each thread in domain initializes its own stream chunks
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 4 threads
+--------------------------------------------------------------------------------
+Running without Marker API. Activate Marker API with -m on commandline.
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 5000 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on hwthread 4 - Vector length 5000 Offset 5000
+Group: 0 Thread 2 Global Thread 2 running on hwthread 1 - Vector length 5000 Offset 10000
+Group: 0 Thread 3 Global Thread 3 running on hwthread 5 - Vector length 5000 Offset 15000
+--------------------------------------------------------------------------------
+Cycles:			6524511744
+CPU Clock:		2303978062
+Cycle Clock:		2303978062
+Time:			2.831846e+00 sec
+Iterations:		262144
+Iterations per thread:	65536
+Inner loop executions:	5000
+Size (Byte):		160000
+Size per thread:	40000
+Number of Flops:	20971520000
+MFlops/s:		7405.60
+Data volume (Byte):	10485760000
+MByte/s:		3702.80
+Cycles per update:	4.977807
+Cycles per cacheline:	39.822459
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		26214400032
+UOPs:			24903680000
+--------------------------------------------------------------------------------
+Allocate: Process running on hwthread 0 (Domain N) - Vector length 20000/160000 Offset 0 Alignment 512
+Initialization: Each thread in domain initializes its own stream chunks
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops_avx
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 4 threads
+--------------------------------------------------------------------------------
+Running without Marker API. Activate Marker API with -m on commandline.
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 5000 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on hwthread 4 - Vector length 5000 Offset 5000
+Group: 0 Thread 2 Global Thread 2 running on hwthread 1 - Vector length 5000 Offset 10000
+Group: 0 Thread 3 Global Thread 3 running on hwthread 5 - Vector length 5000 Offset 15000
+--------------------------------------------------------------------------------
+Cycles:			6741065008
+CPU Clock:		2303976031
+Cycle Clock:		2303976031
+Time:			2.925840e+00 sec
+Iterations:		1048576
+Iterations per thread:	262144
+Inner loop executions:	1250
+Size (Byte):		160000
+Size per thread:	40000
+Number of Flops:	78643200000
+MFlops/s:		26878.85
+Data volume (Byte):	41943040000
+MByte/s:		14335.38
+Cycles per update:	1.285756
+Cycles per cacheline:	10.286049
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		24903680032
+UOPs:			23592960000
+--------------------------------------------------------------------------------
+Allocate: Process running on hwthread 0 (Domain N) - Vector length 20000/160000 Offset 0 Alignment 512
+Initialization: Each thread in domain initializes its own stream chunks
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops_avx_fma
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 4 threads
+--------------------------------------------------------------------------------
+Running without Marker API. Activate Marker API with -m on commandline.
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 5000 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on hwthread 4 - Vector length 5000 Offset 5000
+Group: 0 Thread 2 Global Thread 2 running on hwthread 1 - Vector length 5000 Offset 10000
+Group: 0 Thread 3 Global Thread 3 running on hwthread 5 - Vector length 5000 Offset 15000
+--------------------------------------------------------------------------------
+Cycles:			6715743800
+CPU Clock:		2303973227
+Cycle Clock:		2303973227
+Time:			2.914853e+00 sec
+Iterations:		1048576
+Iterations per thread:	262144
+Inner loop executions:	1250
+Size (Byte):		160000
+Size per thread:	40000
+Number of Flops:	157286400000
+MFlops/s:		53960.32
+Data volume (Byte):	41943040000
+MByte/s:		14389.42
+Cycles per update:	1.280926
+Cycles per cacheline:	10.247412
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		24903680032
+UOPs:			23592960000
+--------------------------------------------------------------------------------
+Allocate: Process running on hwthread 0 (Domain N) - Vector length 40000/320000 Offset 0 Alignment 512
+Initialization: Each thread in domain initializes its own stream chunks
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops_avx_fma
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 8 threads
+--------------------------------------------------------------------------------
+Running without Marker API. Activate Marker API with -m on commandline.
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 5000 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on hwthread 4 - Vector length 5000 Offset 5000
+Group: 0 Thread 3 Global Thread 3 running on hwthread 5 - Vector length 5000 Offset 15000
+Group: 0 Thread 4 Global Thread 4 running on hwthread 2 - Vector length 5000 Offset 20000
+Group: 0 Thread 5 Global Thread 5 running on hwthread 6 - Vector length 5000 Offset 25000
+Group: 0 Thread 7 Global Thread 7 running on hwthread 7 - Vector length 5000 Offset 35000
+Group: 0 Thread 2 Global Thread 2 running on hwthread 1 - Vector length 5000 Offset 10000
+Group: 0 Thread 6 Global Thread 6 running on hwthread 3 - Vector length 5000 Offset 30000
+--------------------------------------------------------------------------------
+Cycles:			6073302220
+CPU Clock:		2303977806
+Cycle Clock:		2303977806
+Time:			2.636007e+00 sec
+Iterations:		1048576
+Iterations per thread:	131072
+Inner loop executions:	1250
+Size (Byte):		320000
+Size per thread:	40000
+Number of Flops:	157286400000
+MFlops/s:		59668.42
+Data volume (Byte):	41943040000
+MByte/s:		15911.58
+Cycles per update:	1.158390
+Cycles per cacheline:	9.267124
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		24903680032
+UOPs:			23592960000
+--------------------------------------------------------------------------------
+fatima@fatima-ThinkPad-T14s-Gen-1:~$ 
+
