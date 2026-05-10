@@ -334,9 +334,9 @@ def main():
     print(f"  ✓ CSV data saved: {csv_file}")
     
     print("\n" + "=" * 60)
-    print(f"✅ ANALYSIS COMPLETE FOR {version.upper()}!")
+    print(f" ANALYSIS COMPLETE FOR {version.upper()}!")
     print("=" * 60)
-    print(f"\n📁 All outputs saved to: {version_dir}")
+    print(f"\n All outputs saved to: {version_dir}")
     print("\nGenerated files:")
     print(f"  - {version}_roofline_summary.txt")
     print(f"  - {version}_roofline_plot.png")
