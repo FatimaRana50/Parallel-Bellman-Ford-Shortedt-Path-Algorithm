@@ -1,0 +1,192 @@
+Running graph_V1_D1.bin
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+[rank0] V=10 E=22 D=0.25
+[rank 1] my_start=3 my_end=6
+[rank 0] my_start=0 my_end=3
+[DEBUG iter0] my_cnt=2 total=2
+[rank 2] my_start=6 my_end=8
+[rank 3] my_start=8 my_end=10
+[VERIFY] CORRECT
+[SANITY] Reachable=8/10 MaxDist=351
+Running graph_V1_D2.bin
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+[rank0] V=10 E=45 D=0.50
+[rank 0] my_start=0 my_end=3
+[rank 2] my_start=6 my_end=8
+[rank 1] my_start=3 my_end=6
+[DEBUG iter0] my_cnt=2 total=2
+[rank 3] my_start=8 my_end=10
+[VERIFY] CORRECT
+[SANITY] Reachable=10/10 MaxDist=215
+Running graph_V1_D3.bin
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+[rank0] V=10 E=67 D=0.75
+[rank 1] my_start=3 my_end=6
+[rank 0] my_start=0 my_end=3
+[DEBUG iter0] my_cnt=8 total=8
+[rank 2] my_start=6 my_end=8
+[rank 3] my_start=8 my_end=10
+[VERIFY] CORRECT
+[SANITY] Reachable=10/10 MaxDist=215
+Running graph_V1_D4.bin
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+[rank0] V=10 E=90 D=1.00
+[rank 0] my_start=0 my_end=3
+[rank 2] my_start=6 my_end=8
+[rank 1] my_start=3 my_end=6
+[DEBUG iter0] my_cnt=13 total=13
+[VERIFY] CORRECT
+[SANITY] Reachable=10/10 MaxDist=142
+[rank 3] my_start=8 my_end=10
+Running graph_V2_D1.bin
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+[rank0] V=100 E=2463 D=0.25
+[rank 1] my_start=25 my_end=50
+[rank 0] my_start=0 my_end=25
+[DEBUG iter0] my_cnt=169 total=169
+[rank 3] my_start=75 my_end=100
+[rank 2] my_start=50 my_end=75
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=100/100 MaxDist=0 (negative cycle detected)
+Running graph_V2_D2.bin
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+[rank0] V=100 E=4928 D=0.50
+[rank 1] my_start=25 my_end=50
+[rank 0] my_start=0 my_end=25
+[DEBUG iter0] my_cnt=259 total=259
+[rank 2] my_start=50 my_end=75
+[rank 3] my_start=75 my_end=100
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=100/100 MaxDist=0 (negative cycle detected)
+Running graph_V2_D3.bin
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+[rank0] V=100 E=7396 D=0.75
+[rank 1] my_start=25 my_end=50
+[rank 0] my_start=0 my_end=25
+[DEBUG iter0] my_cnt=305 total=305
+[rank 2] my_start=50 my_end=75
+[rank 3] my_start=75 my_end=100
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=100/100 MaxDist=0 (negative cycle detected)
+Running graph_V2_D4.bin
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+[rank0] V=100 E=9862 D=1.00
+[rank 0] my_start=0 my_end=25
+[rank 1] my_start=25 my_end=50
+[DEBUG iter0] my_cnt=347 total=347
+[rank 2] my_start=50 my_end=75
+[rank 3] my_start=75 my_end=100
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=100/100 MaxDist=0 (negative cycle detected)
+Running graph_V3_D1.bin
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+[rank0] V=1000 E=248916 D=0.25
+[rank 1] my_start=250 my_end=500
+[rank 0] my_start=0 my_end=250
+[DEBUG iter0] my_cnt=6286 total=6286
+[rank 2] my_start=500 my_end=750
+[rank 3] my_start=750 my_end=1000
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=1000/1000 MaxDist=0 (negative cycle detected)
+Running graph_V3_D2.bin
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+[rank0] V=1000 E=497865 D=0.50
+[rank 0] my_start=0 my_end=250
+[rank 1] my_start=250 my_end=500
+[DEBUG iter0] my_cnt=8349 total=8349
+[rank 2] my_start=500 my_end=750
+[rank 3] my_start=750 my_end=1000
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=1000/1000 MaxDist=0 (negative cycle detected)
+Running graph_V3_D3.bin
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+[rank0] V=1000 E=746801 D=0.75
+[rank 0] my_start=0 my_end=250
+[rank 1] my_start=250 my_end=500
+[DEBUG iter0] my_cnt=9803 total=9803
+[rank 3] my_start=750 my_end=1000
+[rank 2] my_start=500 my_end=750
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=1000/1000 MaxDist=0 (negative cycle detected)
+Running graph_V3_D4.bin
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+[rank0] V=1000 E=995763 D=1.00
+[rank 0] my_start=0 my_end=250
+[rank 1] my_start=250 my_end=500
+[DEBUG iter0] my_cnt=12064 total=12064
+[rank 2] my_start=500 my_end=750
+[rank 3] my_start=750 my_end=1000
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=1000/1000 MaxDist=0 (negative cycle detected)
+Running graph_V4_D1.bin
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+[rank0] V=5000 E=6228628 D=0.25
+[rank 0] my_start=0 my_end=1250
+[rank 1] my_start=1250 my_end=2500
+[rank 2] my_start=2500 my_end=3750
+[DEBUG iter0] my_cnt=80197 total=80197
+[rank 3] my_start=3750 my_end=5000
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=5000/5000 MaxDist=0 (negative cycle detected)
+Running graph_V4_D2.bin
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+[rank0] V=5000 E=12457587 D=0.50
+[rank 0] my_start=0 my_end=1250
+[rank 1] my_start=1250 my_end=2500
+[DEBUG iter0] my_cnt=132731 total=132731
+[rank 2] my_start=2500 my_end=3750
+[rank 3] my_start=3750 my_end=5000
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=5000/5000 MaxDist=0 (negative cycle detected)
+Running graph_V4_D3.bin
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+[rank0] V=5000 E=18686030 D=0.75
+[rank 0] my_start=0 my_end=1250
+[rank 1] my_start=1250 my_end=2500
+[rank 2] my_start=2500 my_end=3750
+[DEBUG iter0] my_cnt=181772 total=181772
+[rank 3] my_start=3750 my_end=5000
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=5000/5000 MaxDist=0 (negative cycle detected)
+Running graph_V4_D4.bin
+Warning: Permanently added 'node2' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node3' (ED25519) to the list of known hosts.
+Warning: Permanently added 'node1' (ED25519) to the list of known hosts.
+[rank0] V=5000 E=24914382 D=1.00
+[rank 0] my_start=0 my_end=1250
+[rank 1] my_start=1250 my_end=2500
+[DEBUG iter0] my_cnt=245372 total=245372
+[rank 2] my_start=2500 my_end=3750
+[rank 3] my_start=3750 my_end=5000
+[VERIFY] SKIPPED (negative cycle detected)
+[SANITY] Reachable=5000/5000 MaxDist=0 (negative cycle detected)
